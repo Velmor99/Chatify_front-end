@@ -1,0 +1,61 @@
+.contacts-card {
+    height: 83px;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 3px 4px rgba(204, 204, 204, 0.25);
+    border-radius: 18px;
+    padding: 11px 23px 11px 14px;
+  
+    &__image-block {
+      position: relative;
+      width: 56.6px;
+      height: 56.6px;
+      border-radius: 29px;
+      border: 2px solid #5c33cf;
+      margin-right: 20.4px;
+    }
+  
+    &__image {
+      position: absolute;
+      width: 49.91px;
+      height: 49.91px;
+      border-radius: 25px;
+      border: 2px solid #fff;
+      display: block;
+      top: 1.5px;
+      left: 1.5px;
+      object-fit: cover;
+    }
+  
+    &__title {
+      font-size: 14px;
+      font-weight: 600px;
+      line-height: 16px;
+      color: #000;
+      margin-bottom: 2px;
+    }
+  
+    &__last-message {
+      margin-bottom: 2px;
+    }
+  
+    &__last-message,
+    &__particepants {
+      font-size: 11px;
+      color: #8497af;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  
+    &__button {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: none;
+      cursor: pointer;
+      margin: auto 0 auto auto;
+      background: #fff;
+    }
+  }
+  

@@ -1,0 +1,48 @@
+.item {
+  width: 56.6px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__image {
+    width: 49.91px;
+    height: 49.91px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -24.955px;
+    margin-top: -24.955px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #f5f5f5;
+  }
+
+  &__image-block {
+    position: relative;
+    left: 0;
+    width: 56.6px;
+    height: 56.6px;
+    border-radius: 30px;
+
+    &--active {
+      position: relative;
+      left: 0;
+      border: 2px solid #9271ef;
+      width: 56.6px;
+      height: 56.6px;
+      border-radius: 30px;
+    }
+  }
+
+  &__name {
+    box-sizing: border-box;
+    display: block;
+    margin: auto auto 0 auto;
+    text-align: center;
+    font-size: 12px;
+    max-width: 56.6px;
+    overflow-x: hidden;
+  }
+}

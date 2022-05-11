@@ -1,0 +1,117 @@
+.correspondence {
+  &__messages-list {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  &__message-item {
+    margin-bottom: 10px;
+    width: 100%;
+    display: grid;
+
+    &-owner {
+      // grid-template-columns: 10px 1fr;
+    }
+  }
+
+  &__message {
+    display: flex;
+    // width: 100%;
+
+    &-sender {
+      flex-direction: row-reverse;
+    }
+
+    &-owner {
+      margin-left: auto;
+      grid-column: 2;
+    }
+  }
+
+  &__background {
+    background-image: url("../../img/pattern2.jpg");
+    height: calc(100vh - 46px);
+    width: 100%;
+    overflow-y: scroll;
+    padding-bottom: 86px;
+  }
+
+  &__message-content {
+    background: #fff;
+    max-width: 75%;
+    // border-radius: 10px 10px 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 10px;
+
+    &-sender {
+      background: #f6f5ff;
+      margin-right: auto;
+      margin-left: 0;
+      border-radius: 10px 10px 10px 0px;
+    }
+
+    &-owner {
+      margin-left: auto;
+      margin-right: 0;
+      border-radius: 10px 10px 0px 10px;
+    }
+  }
+
+  &__image-block {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: auto 0 0 0;
+
+    &-owner {
+      margin-left: 10px;
+    }
+
+    &-sender {
+      margin-right: 10px;
+    }
+  }
+
+  &__image-block img {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__time-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #734dde;
+  }
+
+  &__time {
+    color: #686a8a;
+    font-size: 12px;
+    display: block;
+    margin: auto 0;
+  }
+
+  &__visible-indicator {
+    margin: auto 0;
+    width: 16px;
+    height: 18px;
+  }
+}

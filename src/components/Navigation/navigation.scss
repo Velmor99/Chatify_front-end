@@ -1,0 +1,44 @@
+.navigation {
+  background: #fff;
+  height: 98px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 19px 10.4% 0 10.4%;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image-block {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 6px auto;
+  }
+
+  &__profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 13px;
+    display: block;
+  }
+
+  &__text {
+    font-size: 12px;
+    color: #c1cbd7;
+
+    &-active {
+      color: #5c33cf;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: block;
+  }
+}

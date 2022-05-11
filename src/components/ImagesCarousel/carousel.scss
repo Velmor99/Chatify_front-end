@@ -1,0 +1,24 @@
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  padding: 38px 1.5rem 0 1.5rem;
+  scrollbar-width: 0px;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+    width: 56.6px;
+    height: 100%;
+    margin-right: 26px;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin: 0;
+    }
+  }
+}
