@@ -2,7 +2,8 @@ import React, { Suspense } from "react";
 import { Routes, useRoutes } from "react-router-dom";
 //
 import Layout from "./layout/Layout";
-import ChatPage from "./pages/ChatPage/ChatPage";
+// import ChatPage from "./pages/ChatPage/ChatPage";
+import ChatPage from './containers/Socket/SocketContainer';
 import ChatListPage from "./pages/ChatLIstPage/ChatLIstPage";
 import GroupsPage from "./pages/GroupsPage/GroupsPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";

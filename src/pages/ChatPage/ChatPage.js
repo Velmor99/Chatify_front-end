@@ -5,13 +5,13 @@ import Correspondence from "../../components/Correspondence/Correspondence";
 import MessagePanel from "../../components/MessagePanel/MessagePanel";
 import {Outlet} from 'react-router-dom';
 
-const ChatPage = () => {
+const ChatPage = ({sendMessage}) => {
   return (
     <div className="messages">
       <TopChatPanel />
       <Correspondence />
       <Outlet />
-      <MessagePanel />
+      <MessagePanel sendMessage={sendMessage} />
     </div>
   );
 };
