@@ -4,7 +4,7 @@ import { Routes, useRoutes } from "react-router-dom";
 import Layout from "./layout/Layout";
 // import ChatPage from "./pages/ChatPage/ChatPage";
 import ChatPage from './containers/Socket/SocketContainer';
-import ChatListPage from "./pages/ChatLIstPage/ChatLIstPage";
+import ChatListPage from "./containers/Conversations/ConversationsContainer";
 import GroupsPage from "./pages/GroupsPage/GroupsPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
