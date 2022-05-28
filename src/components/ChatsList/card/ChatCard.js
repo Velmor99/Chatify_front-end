@@ -1,8 +1,8 @@
 import React from "react";
 import "./chatcard.scss";
 
-const Card = ({ user, lastMessage }) => {
-  const {name, img} = user[0]
+const Card = ({ reciever, lastMessage }) => {
+  const {name, img} = reciever[0]
   return (
     <div className="card">
       <div className="card-content">

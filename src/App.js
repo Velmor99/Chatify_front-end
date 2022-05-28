@@ -40,8 +40,9 @@ const App = () => {
         },
       ],
     },
+    //написать нормальный роутинг /?chat=:id
     {
-      path: "chat/:id",
+      path: "/chat/:id",
       element: <ChatPage />,
     },
     {

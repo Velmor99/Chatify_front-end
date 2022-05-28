@@ -2,7 +2,7 @@ import { takeEvery, put, call } from "redux-saga/effects";
 import { GET_ALL_CONVERSATIONS, GET_ALL_CONVERSATIONS_REQUEST } from "../types";
 import axios from "axios";
 
-export function* conversationsWather() {
+export function* conversationsWatcher() {
   yield takeEvery(GET_ALL_CONVERSATIONS_REQUEST, getConversationsWorker);
 }
 

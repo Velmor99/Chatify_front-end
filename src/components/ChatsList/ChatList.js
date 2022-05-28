@@ -11,10 +11,10 @@ const ChatList = ({ conversations, email }) => {
         {conversations.length > 0 ? (
           conversations.map((item) => (
             <li key={item._id}>
-              <Link className="chat-list__link" to={"/chat/23"}>
+              <Link className="chat-list__link" to={`/chat/${item._id}`}>
                 <Card
                   lastMessage={item.lastMessage}
-                  user={item.members.filter((user) => user.email !== email)}
+                  reciever={item.members.filter((user) => user.email !== email)}
                 />
               </Link>
             </li>
@@ -24,51 +24,6 @@ const ChatList = ({ conversations, email }) => {
             <p>none</p>
           </li>
         )}
-        {/* <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li>
-        <li>
-          <Link className="chat-list__link" to={"/chat/23"}>
-            <Card />
-          </Link>
-        </li> */}
       </ul>
     </div>
   );

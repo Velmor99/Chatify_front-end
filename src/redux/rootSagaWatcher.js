@@ -1,7 +1,8 @@
 import { all } from "redux-saga/effects";
 import { registerWatcher } from "./auth/authSaga";
-import { conversationsWather } from "./conversations/conversationsSaga";
+import { conversationsWatcher } from "./conversations/conversationsSaga";
+import { messagesWatcher } from "./messages/messagesSaga";
 
 export function* rootWatcher() {
-  yield all([registerWatcher(), conversationsWather()]);
+  yield all([registerWatcher(), conversationsWatcher(), messagesWatcher()]);
 }

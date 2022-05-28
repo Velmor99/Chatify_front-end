@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import ChatPage from "../../pages/ChatPage/ChatPage";
 import { io } from "socket.io-client";
 import { connect } from "react-redux";
-import { saveMessage } from "../../redux/messages/messagesAction";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
+import {
+  saveMessage,
+  getAllMessagesRequest,
+} from "../../redux/messages/messagesAction";
 
 const messages = [
   // {
@@ -75,14 +80,15 @@ const messages = [
 
 const socket = io.connect("ws://localhost:4040");
 
-const SocketContainer = ({ saveMessage }) => {
+const SocketContainer = ({ saveMessage, getAllMessagesRequest }) => {
   const [room, setRoom] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
-    if(room !== "") {
-      socket.emit("join_room", 23)
+    if (room !== "") {
+      socket.emit("join_room", 23);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     socket.on("receive_message", (data) => {
@@ -92,6 +98,14 @@ const SocketContainer = ({ saveMessage }) => {
       console.log(messages);
     });
   }, [socket]);
+
+  // todo поменять на нормальный функционал через queryString
+  useEffect(() => {
+    const id = location.pathname.split("/")[2];
+    getAllMessagesRequest(id);
+  }, []);
+
+  console.log(location.pathname.split("/")[2]);
 
   const sendMessage = (message) => {
     // console.log("worked");
@@ -115,6 +129,7 @@ const SocketContainer = ({ saveMessage }) => {
 
 const mapDispatchToProps = {
   saveMessage,
+  getAllMessagesRequest,
 };
 
 export default connect(null, mapDispatchToProps)(SocketContainer);
